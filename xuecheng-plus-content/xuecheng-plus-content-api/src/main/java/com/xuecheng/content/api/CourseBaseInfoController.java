@@ -35,7 +35,7 @@ public class CourseBaseInfoController {
         courseBase.setCreateDate(LocalDateTime.now());
         List<CourseBase> courseBases = new ArrayList();
         courseBases.add(courseBase);
-        PageResult pageResult = new PageResult<CourseBase>(courseBases,10,1,10);
+        PageResult pageResult = new PageResult<CourseBase>(courseBases,10,pageParams.getPageNo(),pageParams.getPageSize());
         return pageResult;
 
     }
